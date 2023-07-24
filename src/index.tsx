@@ -3,10 +3,11 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { Provider } from "react-redux";
-// import store from "./controllers/stores";
-import reportWebVitals from "./reportWebVitals";
+import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 root.render(
   <React.StrictMode>
     <App />
