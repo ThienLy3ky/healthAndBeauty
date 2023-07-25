@@ -102,7 +102,7 @@ const MenuClient = (props: any) => {
                 <a href="shops" className="nav-item nav-link">
                   Shop
                 </a>
-                <a href="detail.html" className="nav-item nav-link">
+                <a href="products" className="nav-item nav-link">
                   Shop Detail
                 </a>
                 <div className="nav-item dropdown">
@@ -114,10 +114,10 @@ const MenuClient = (props: any) => {
                     Pages <i className="fa fa-angle-down mt-1"></i>
                   </a>
                   <div className="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                    <a href="cart.html" className="dropdown-item">
+                    <a href="/cart" className="dropdown-item">
                       Shopping Cart
                     </a>
-                    <a href="checkout.html" className="dropdown-item">
+                    <a href="/checkout" className="dropdown-item">
                       Checkout
                     </a>
                   </div>
