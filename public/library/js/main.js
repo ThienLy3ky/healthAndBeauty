@@ -30,7 +30,7 @@
       $(".back-to-top").fadeOut("slow");
     }
   });
-  $(".back-to-top").click(function () {
+  $(document).on("click", ".back-to-top", function () {
     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
   });

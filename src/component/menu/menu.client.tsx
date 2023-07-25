@@ -99,7 +99,7 @@ const MenuClient = (props: any) => {
                 <a href="index.html" className="nav-item nav-link active">
                   Home
                 </a>
-                <a href="shop.html" className="nav-item nav-link">
+                <a href="shops" className="nav-item nav-link">
                   Shop
                 </a>
                 <a href="detail.html" className="nav-item nav-link">
