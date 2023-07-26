@@ -40,6 +40,14 @@
         },
       },
     });
+
+    $(".carousel-next").click(function () {
+      $(".related-carousel").trigger("next.owl.carousel");
+    });
+
+    $(".carousel-prev").click(function () {
+      $(".related-carousel").trigger("prev.owl.carousel");
+    });
   });
 
   // Back to top button

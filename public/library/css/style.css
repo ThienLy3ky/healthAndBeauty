@@ -11046,3 +11046,24 @@ h6 {
   background-color: #f26522;
   color: #ffffff;
 }
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #0029ff6e;
+  text-align: center;
+  transition: opacity 0.15s ease;
+}
+.carousel-prev:hover,
+.carousel-next:hover {
+  font-size: 35px;
+  color: #001db3;
+  text-decoration:none;
+  opacity: none;
+}
