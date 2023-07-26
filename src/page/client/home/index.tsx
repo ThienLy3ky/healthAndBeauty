@@ -1,9 +1,14 @@
+import BannerClient from "component/banner/banner.client";
 import Categories from "./categori";
 import ProductHot from "./products.hot";
 import Sale from "./sale";
+import Feature from "./feature";
+import TestProduct from "./test";
 export default function home() {
   return (
     <div>
+      <BannerClient />
+      <Feature />
       <div className="container-fluid mb-3">
         <div className="row px-xl-5">
           <div className="col-lg-8">
@@ -58,6 +63,7 @@ export default function home() {
                     className="position-absolute w-100 h-100"
                     src="/image/img/carousel-2.jpg"
                     style={{ objectFit: "cover" }}
+                    alt=""
                   />
                   <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div className="p-3" style={{ maxWidth: "700px" }}>
@@ -70,7 +76,7 @@ export default function home() {
                       </p>
                       <a
                         className="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp"
-                        href="#"
+                        href="#/"
                       >
                         Shop Now
                       </a>
@@ -85,6 +91,7 @@ export default function home() {
                     className="position-absolute w-100 h-100"
                     src="/image/img/carousel-3.jpg"
                     style={{ objectFit: "cover" }}
+                    alt=""
                   />
                   <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div className="p-3" style={{ maxWidth: "700px" }}>
@@ -97,7 +104,7 @@ export default function home() {
                       </p>
                       <a
                         className="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp"
-                        href="#"
+                        href="#/"
                       >
                         Shop Now
                       </a>
@@ -113,7 +120,7 @@ export default function home() {
               <div className="offer-text">
                 <h6 className="text-white text-uppercase">Save 20%</h6>
                 <h3 className="text-white mb-3">Special Offer</h3>
-                <a href="" className="btn btn-primary">
+                <a href="#/" className="btn btn-primary">
                   Shop Now
                 </a>
               </div>
@@ -123,7 +130,7 @@ export default function home() {
               <div className="offer-text">
                 <h6 className="text-white text-uppercase">Save 20%</h6>
                 <h3 className="text-white mb-3">Special Offer</h3>
-                <a href="" className="btn btn-primary">
+                <a href="#/" className="btn btn-primary">
                   Shop Now
                 </a>
               </div>
@@ -132,6 +139,7 @@ export default function home() {
         </div>
       </div>
       <Categories />
+      {/* <TestProduct /> */}
       <ProductHot />
       <div className="container-fluid pt-5 pb-3">
         <h2 className="section-title position-relative text-uppercase mx-xl-5 mb-4">
@@ -147,22 +155,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">
@@ -191,22 +199,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">
@@ -235,22 +243,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">
@@ -279,22 +287,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">
@@ -323,22 +331,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">
@@ -367,22 +375,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">
@@ -411,22 +419,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">
@@ -455,22 +463,22 @@ export default function home() {
                   alt=""
                 />
                 <div className="product-action">
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-shopping-cart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="far fa-heart"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-sync-alt"></i>
                   </a>
-                  <a className="btn btn-outline-dark btn-square" href="">
+                  <a className="btn btn-outline-dark btn-square" href="#/">
                     <i className="fa fa-search"></i>
                   </a>
                 </div>
               </div>
               <div className="text-center py-4">
-                <a className="h6 text-decoration-none text-truncate" href="">
+                <a className="h6 text-decoration-none text-truncate" href="#/">
                   Product Name Goes Here
                 </a>
                 <div className="d-flex align-items-center justify-content-center mt-2">

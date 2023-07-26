@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import MenuClient from "component/menu/menu.client";
-import Header from "component/header";
+import Header from "component/header/index.client";
 import Home from "./home";
 import Shops from "./shop";
 import Footer from "./footer";
