@@ -6,7 +6,7 @@ export default function DropdownMenu() {
       style={{ zIndex: "999" }}
     >
       <div className="navbar-nav w-100">
-        <div className="nav-item dropright dropdown">
+        <div className="nav-item dropright dropdown dropdown-item-a">
           <a
             href="#/"
             className="nav-link dropdown-toggle"
@@ -26,31 +26,31 @@ export default function DropdownMenu() {
             </a>
           </div>
         </div>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Shirts
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Jeans
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Swimwear
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Sleepwear
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Sportswear
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Jumpsuits
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Blazers
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Jackets
         </a>
-        <a href="#/" className="nav-item nav-link">
+        <a href="#/" className="nav-item nav-link dropdown-item-a">
           Shoes
         </a>
       </div>

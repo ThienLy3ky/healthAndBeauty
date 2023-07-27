@@ -25,7 +25,7 @@ export default function BannerClient() {
         <div className="header_section">
           <div className="container">
             <div className="containt_main d-flex justify-content-center">
-              <div className="dropdown col-3" style={{ textAlign: "end" }}>
+              <div className="dropdown " style={{ paddingRight: "10px" }}>
                 <a
                   className="btn btn-success dropdown-toggle"
                   data-toggle="collapse"

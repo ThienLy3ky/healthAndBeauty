@@ -1,8 +1,8 @@
 /******* Bootstrap Theming ********/
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
+ * Copyright 2011020 The Bootstrap Authors
+ * Copyright 2011020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
@@ -11047,23 +11047,138 @@ h6 {
   color: #ffffff;
 }
 
-.carousel-prev,
+.carousel-prev {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-size: 2px;
+  color: #ff00938f;
+  text-align: center;
+  transition: opacity 0.15s ease;
+  animation: zoom-out-left 0.5s;
+  animation-timing-function: ease-in;
+}
 .carousel-next {
   position: absolute;
+  right: -60px;
   top: 0;
   bottom: 0;
   z-index: 1;
   display: flex;
   align-items: center;
-  font-size: 20px;
-  color: #0029ff6e;
+  font-size: 2px;
+  color: #ff00938f;
   text-align: center;
   transition: opacity 0.15s ease;
+  animation: zoom-out-right 0.5s;
+  animation-timing-function: ease-in;
 }
-.carousel-prev:hover,
-.carousel-next:hover {
-  font-size: 35px;
+.row:hover .carousel-prev {
+  font-size: 40px;
+  left: 0px;
   color: #001db3;
-  text-decoration:none;
+  text-decoration: none;
   opacity: none;
+  animation: zoom-hover-left 0.5s;
+  animation-timing-function: ease-out;
+}
+.row:hover .carousel-next {
+  font-size: 40px;
+  right: 0px;
+  color: #001db3;
+  text-decoration: none;
+  opacity: none;
+  animation: zoom-hover-right 0.5s;
+  animation-timing-function: ease-out;
+}
+@keyframes zoom-hover-left {
+  from {
+    left: -60px;
+    font-size: 2px;
+    color: #ff00938f;
+  }
+  to {
+    left: 0px;
+    font-size: 40px;
+    color: #001db3;
+  }
+}
+@keyframes zoom-out-left {
+  to {
+    left: -60px;
+    font-size: 2px;
+    color: #ff00938f;
+  }
+  from {
+    left: 0px;
+    font-size: 40px;
+    color: #001db3;
+  }
+}
+@keyframes zoom-hover-right {
+  from {
+    right: -60px;
+    font-size: 2px;
+    color: #ff00938f;
+  }
+  to {
+    right: 0px;
+    font-size: 40px;
+    color: #001db3;
+  }
+}
+@keyframes zoom-out-right {
+  to {
+    right: -60px;
+    font-size: 2px;
+    color: #ff00938f;
+  }
+  from {
+    right: 0px;
+    font-size: 40px;
+    color: #001db3;
+  }
+}
+.dropdown-item-a {
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  border: unset !important;
+  animation: dropdown-out 1s;
+  animation-timing-function: ease-out;
+}
+.dropdown-item-a:hover {
+  background-color: #8fd19e;
+  color: darkblue;
+  font-weight: bolder;
+  animation: dropdown-over 0.3s;
+  animation-timing-function: ease-out;
+}
+@keyframes dropdown-over {
+  to {
+    background-color: #8fd19e;
+    color: darkblue;
+    font-weight: bolder;
+  }
+  from {
+    background-color: white;
+    color: black;
+    font-weight: normal;
+  }
+}
+@keyframes dropdown-out {
+  to {
+    background-color: white;
+    color: black;
+    font-weight: normal;
+  }
+  from {
+    background-color: #8fd19e;
+    color: darkblue;
+    font-weight: bolder;
+  }
 }

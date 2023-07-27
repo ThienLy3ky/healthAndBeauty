@@ -353,20 +353,10 @@ export default function ProductHot() {
             </div>
           </div>
 
-          <a
-            className="carousel-prev"
-            href="#/"
-            role="button"
-            style={{ left: "3%" }}
-          >
+          <a className="carousel-prev" href="#/" role="button">
             <i className="fa fa-angle-left"></i>
           </a>
-          <a
-            className="carousel-next"
-            role="button"
-            href="#/"
-            style={{ right: "3%" }}
-          >
+          <a className="carousel-next" role="button" href="#/">
             <i className="fa fa-angle-right"></i>
           </a>
         </div>
