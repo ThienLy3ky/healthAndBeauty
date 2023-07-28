@@ -1,3 +1,4 @@
+import catagories from "config/category.json";
 export default function Categories() {
   return (
     <div className="container-fluid pt-5">
@@ -5,134 +6,26 @@ export default function Categories() {
         <span className="bg-secondary pr-3">Categories</span>
       </h2>
       <div className="row px-xl-5 pb-3">
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-1.jpg" alt="" />
+        {catagories?.map((category) => (
+          <div className="col-lg-3 col-md-4 col-sm-6 pb-1" key={category?.id}>
+            <a className="text-decoration-none" href="">
+              <div className="cat-item d-flex align-items-center mb-4">
+                <div
+                  className="overflow-hidden"
+                  style={{ width: "100px", height: "100px" }}
+                >
+                  <img className="img-fluid" src={category?.image} alt="" />
+                </div>
+                <div className="flex-fill pl-3">
+                  <h6>{category?.name}</h6>
+                  <small className="text-body">100 Products</small>
+                </div>
               </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item img-zoom d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-2.jpg" alt="" />
-              </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item img-zoom d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-3.jpg" alt="" />
-              </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item img-zoom d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-4.jpg" alt="" />
-              </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item img-zoom d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-4.jpg" alt="" />
-              </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item img-zoom d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-3.jpg" alt="" />
-              </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item img-zoom d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-2.jpg" alt="" />
-              </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-          <a className="text-decoration-none" href="">
-            <div className="cat-item img-zoom d-flex align-items-center mb-4">
-              <div
-                className="overflow-hidden"
-                style={{ width: "100px", height: "100px" }}
-              >
-                <img className="img-fluid" src="/image/img/cat-1.jpg" alt="" />
-              </div>
-              <div className="flex-fill pl-3">
-                <h6>Category Name</h6>
-                <small className="text-body">100 Products</small>
-              </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        ))}
+
+        {/*         
         <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
           <a className="text-decoration-none" href="">
             <div className="cat-item img-zoom d-flex align-items-center mb-4">
@@ -196,7 +89,7 @@ export default function Categories() {
               </div>
             </div>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

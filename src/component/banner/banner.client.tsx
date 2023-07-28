@@ -3,10 +3,7 @@ import DropdownMenu from "component/dropdown/categori.menu";
 export default function BannerClient() {
   return (
     <div className="container-fluid">
-      <div
-        className="banner_bg_main"
-        style={{ marginBottom: "20px", minHeight: "500px" }}
-      >
+      <div className="banner_bg_main" style={{ marginBottom: "20px" }}>
         <div className="logo_section">
           <div className="container">
             <div className="row">
