@@ -32,7 +32,10 @@ export default function CardProductShort(props: propsIF) {
         </div>
       </div>
       <div className="text-center py-4">
-        <a className="h6 text-decoration-none text-truncate" href="#/">
+        <a
+          className="h6 text-decoration-none text-truncate"
+          href={"/products/" + name}
+        >
           {name}
         </a>
         <div className="d-flex align-items-center justify-content-center mt-2">
