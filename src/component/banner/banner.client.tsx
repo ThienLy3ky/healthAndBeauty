@@ -1,5 +1,5 @@
 import DropdownMenu from "component/dropdown/categori.menu";
-
+import categories from "config/MOCK_DATA.categori.json";
 export default function BannerClient() {
   return (
     <div className="container-fluid">
@@ -29,9 +29,9 @@ export default function BannerClient() {
                   href="#navbar-vertical"
                   style={{ borderRadius: "0.25rem" }}
                 >
-                  Categories
+                  Nhóm sản phẩm
                 </a>
-                <DropdownMenu />
+                <DropdownMenu data={categories} />
               </div>
               <div className="main col-6">
                 <div className="input-group">

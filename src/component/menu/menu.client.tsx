@@ -1,9 +1,11 @@
 import NameShop from "component/logo/name";
-
+import * as React from "react";
+import CartContext from "component/context/client.context";
+import CartDropdown from "page/client/cart/cart.dropdown";
 const MenuClient = (props: any) => {
   const { data } = props;
   console.log(data);
-
+  const { carts, setCarts } = React.useContext(CartContext);
   return (
     <div className="container-fluid">
       <div className="banner_bg_main">
@@ -30,36 +32,45 @@ const MenuClient = (props: any) => {
                 >
                   <div className="navbar-nav mr-auto py-0">
                     <a href="/" className="nav-item nav-link active">
-                      Home
+                      Trang Chủ
                     </a>
                     <a href="shops" className="nav-item nav-link">
-                      Shop
+                      Nhãn Hàng
                     </a>
                     <div className="nav-item dropdowns">
                       <a href="/checkout" className="nav-link nav-item">
-                        Check Out
+                        Thanh Toán
                       </a>
                     </div>
                   </div>
                   <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
-                    <a href="#/" className="btn px-0">
-                      <i className="fas fa-heart text-primary"></i>
+                    <div className="btn px-0 ml-3 no-padding no-margin">
+                      <a href="#/" className="btn px-0">
+                        <i className="fas fa-heart text-primary"></i>
+                      </a>
                       <span
-                        className="badge text-secondary border border-secondary rounded-circle"
+                        className="badge number-noti rounded-circle"
                         style={{ paddingBottom: "2px" }}
                       >
                         0
                       </span>
-                    </a>
-                    <a href="#/" className="btn px-0 ml-3">
-                      <i className="fas fa-shopping-cart text-primary"></i>
+                    </div>
+                    <div className="btn px-0 ml-3 no-padding no-margin">
+                      <a
+                        className="btn px-0 ml-3 no-padding no-margin"
+                        data-toggle="collapse"
+                        href="#cart-dropdown"
+                      >
+                        <i className="fas fa-shopping-cart text-primary"></i>
+                      </a>
                       <span
-                        className="badge text-secondary border border-secondary rounded-circle"
+                        className="badge number-noti rounded-circle"
                         style={{ paddingBottom: "2px" }}
                       >
-                        0
+                        {carts && carts?.length ? <b>{carts?.length}</b> : ""}
                       </span>
-                    </a>
+                      <CartDropdown />
+                    </div>
                   </div>
                 </div>
               </nav>

@@ -1,5 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+// import NotFound from "../notfound/notfound.content";
+// import CartDetail from "cart/cart.detail";
+
+import { CartProvider } from "component/context/client.context";
 import MenuClient from "component/menu/menu.client";
 import Header from "component/header/index.client";
 import Home from "./home";
@@ -11,7 +16,7 @@ import CheckOut from "./checkout";
 
 export default function Client() {
   return (
-    <div>
+    <CartProvider>
       <Header />
       <MenuClient data="data" />
       <Routes>
@@ -25,6 +30,6 @@ export default function Client() {
       <button className="btn btn-primary back-to-top">
         <i className="fa fa-angle-double-up"></i>
       </button>
-    </div>
+    </CartProvider>
   );
 }
