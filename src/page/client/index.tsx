@@ -21,7 +21,7 @@ export default function Client() {
       <MenuClient data="data" />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shops" element={<Shops />} />
+        <Route path="/shops/*" element={<Shops />} />
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<CartDetail />} />
         <Route path="/checkout" element={<CheckOut />} />

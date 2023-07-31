@@ -34,7 +34,7 @@ const MenuClient = (props: any) => {
                     <a href="/" className="nav-item nav-link active">
                       Trang Chủ
                     </a>
-                    <a href="shops" className="nav-item nav-link">
+                    <a href="/shops" className="nav-item nav-link">
                       Nhãn Hàng
                     </a>
                     <div className="nav-item dropdowns">
