@@ -13,6 +13,7 @@ import Footer from "./footer";
 import ProductDetail from "./product-detail";
 import CartDetail from "./cart";
 import CheckOut from "./checkout";
+import NotFound from "page/notfound/404";
 
 export default function Client() {
   return (
@@ -25,6 +26,7 @@ export default function Client() {
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<CartDetail />} />
         <Route path="/checkout" element={<CheckOut />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <button className="btn btn-primary back-to-top">

@@ -1,7 +1,13 @@
 export default function FilterClient() {
   return (
-    <div className="col-lg-3 col-md-4">
-      {/* <!-- Price Start --> */}
+    <div
+      className="col-lg-3 col-md-4"
+      style={{
+        background: "radial-gradient(#e01586, #0f058b)",
+        paddingTop: "9px",
+        height: "fit-content",
+      }}
+    >
       <h5 className="section-title position-relative text-uppercase mb-3">
         <span className="bg-secondary pr-3">Filter by price</span>
       </h5>
@@ -230,7 +236,6 @@ export default function FilterClient() {
           </div>
         </form>
       </div>
-      {/* <!-- Size End --> */}
     </div>
   );
 }
