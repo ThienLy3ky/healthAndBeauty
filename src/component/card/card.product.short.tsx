@@ -40,25 +40,33 @@ export default function CardProductShort(props: propsIF) {
           ></button>
           <a className="btn btn-slide btn-square btn-heart" href="#/"></a>
         </div>
-
-        {/* <a className="btn  btn-square" href="#/">
-          <i className="far fa-heart"></i>
-        </a>
-        <a className="btn  btn-square" href="#/">
-          <i className="fa fa-sync-alt"></i>
-        </a>
-        <a className="btn  btn-square" href="#/">
-          <i className="fa fa-search"></i>
-        </a> */}
       </div>
-      <div className="text-center py-4">
+      <div className="py-4 col ">
         <a
-          className="h6 text-decoration-none text-truncate"
+          className="h6 text-decoration-none text-truncate name-product"
           href={"/products/" + name}
         >
           {name}
         </a>
         <div className="d-flex justify-content-betwen mt-2">
+          <div className="col-6 no-padding">
+            <small className="fa fa-star text-primary mr-1"></small>
+            {rate}
+            <small>({totalRate})</small>
+          </div>
+          <div
+            className="col-6 no-padding "
+            style={{
+              display: "inline-flex",
+              placeContent: "flex-end",
+            }}
+          >
+            <h5 className=" no-padding no-margin" style={{ color: "red" }}>
+              {newPrice}
+            </h5>
+          </div>
+        </div>
+        <div className="d-flex justify-content-betwen mt-2 no-padding no-margin">
           <div className="col-6 no-padding">
             {Array(5)
               .fill(1)
@@ -87,20 +95,17 @@ export default function CardProductShort(props: propsIF) {
             <small>({totalRate})</small>
           </div>
           <div
-            className="col-6"
+            className="col-6 no-padding"
             style={{
               display: "inline-flex",
               placeContent: "flex-end",
             }}
           >
-            <h6 className="text-muted mr-2 no-padding">
+            <h6 className="text-muted mr-2 no-padding no-margin">
               <del>
                 <i>{oldPrice}</i>
               </del>
             </h6>
-            <h5 className=" no-padding" style={{ color: "red" }}>
-              {newPrice}
-            </h5>
           </div>
         </div>
       </div>

@@ -11274,3 +11274,7 @@ body #root {
 .contant_box_404 {
   margin-top: -50px;
 }
+.name-product {
+  font-weight: bold;
+  color: blue;
+}
