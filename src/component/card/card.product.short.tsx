@@ -1,6 +1,8 @@
 import CartContext from "component/context/client.context";
 import * as React from "react";
 import { addCart } from "utils/cart.client";
+import { formatMoney } from "utils/action.helper";
+
 interface propsIF {
   name: string;
   image: string;
@@ -19,8 +21,13 @@ export default function CardProductShort(props: propsIF) {
   }
   return (
     <div className="product-item bg-light mb-4">
-      <div className="product-img position-relative overflow-hidden">
-        <img className="img-fluid w-100" src={image} alt="" />
+      <div className="product-img position-relative overflow-hidden d-flex justify-content-center">
+        <img
+          className="img-fluid"
+          style={{ width: "unset" }}
+          src={image}
+          alt=""
+        />
       </div>
       <div className="product-action">
         <div className="btn-groups">
@@ -40,24 +47,32 @@ export default function CardProductShort(props: propsIF) {
           ></button>
           <a className="btn btn-slide btn-square btn-heart" href="#/"></a>
         </div>
-
-        {/* <a className="btn  btn-square" href="#/">
-          <i className="far fa-heart"></i>
-        </a>
-        <a className="btn  btn-square" href="#/">
-          <i className="fa fa-sync-alt"></i>
-        </a>
-        <a className="btn  btn-square" href="#/">
-          <i className="fa fa-search"></i>
-        </a> */}
       </div>
-      <div className="text-center py-4">
+      <div className="col py-4">
         <a
+          title={name}
           className="h6 text-decoration-none text-truncate"
           href={"/products/" + name}
         >
-          {name}
+          {name.slice(0, 30)}
         </a>
+        <div className="d-flex justify-content-betwen mt-2">
+          <div className="col-6 no-padding">
+            {rate}
+            <small>({totalRate})</small>
+          </div>
+          <div
+            className="col-6 no-padding"
+            style={{
+              display: "inline-flex",
+              placeContent: "flex-end",
+            }}
+          >
+            <h5 className=" no-padding" style={{ color: "red" }}>
+              {formatMoney(newPrice)}
+            </h5>
+          </div>
+        </div>
         <div className="d-flex justify-content-betwen mt-2">
           <div className="col-6 no-padding">
             {Array(5)
@@ -84,23 +99,19 @@ export default function CardProductShort(props: propsIF) {
                   ></small>
                 );
               })}
-            <small>({totalRate})</small>
           </div>
           <div
-            className="col-6"
+            className="col-6 no-padding"
             style={{
               display: "inline-flex",
               placeContent: "flex-end",
             }}
           >
-            <h6 className="text-muted mr-2 no-padding">
+            <h6 className="text-muted mr-2 no-padding no-margin">
               <del>
-                <i>{oldPrice}</i>
+                <i>{formatMoney(oldPrice)}</i>
               </del>
             </h6>
-            <h5 className=" no-padding" style={{ color: "red" }}>
-              {newPrice}
-            </h5>
           </div>
         </div>
       </div>

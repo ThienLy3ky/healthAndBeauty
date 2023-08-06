@@ -10346,6 +10346,9 @@ button.bg-dark:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: blue;
+  font-weight: bolder;
+  font-size: 16px;
 }
 
 .text-left {
@@ -11194,6 +11197,7 @@ h6 {
 }
 .btn-cart {
   background-image: url("/image/cart.png");
+  cursor: url("/image/cart.png"), auto;
 }
 .btn-heart {
   background-image: url("/image/heartnone.png");

@@ -1,5 +1,6 @@
 import * as React from "react";
 import CartContext from "component/context/client.context";
+import { formatMoney } from "utils/action.helper";
 export default function CartDropdown(props: any) {
   const { carts, setCarts } = React.useContext(CartContext);
   let sumPrice = 0,
@@ -39,16 +40,20 @@ export default function CartDropdown(props: any) {
                               >
                                 <div className="d-flex justify-content-between">
                                   <div className="d-flex flex-row align-items-center">
-                                    <div>
+                                    <div style={{ width: "50px" }}>
                                       <img
-                                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                        src={cart.image}
                                         className="img-fluid rounded-3"
                                         alt="Shopping item"
-                                        style={{ width: "65px" }}
+                                        style={{ height: "65px" }}
                                       />
                                     </div>
-                                    <div className="ms-3">
-                                      <h6>{cart.name?.slice(1, 10)}</h6>
+                                    <div className="ms-3 col">
+                                      <h6 title={cart?.name}>
+                                        {cart.name?.length > 20
+                                          ? cart.name?.slice(0, 20) + ".."
+                                          : cart.name}
+                                      </h6>
                                       <p className="small mb-0">
                                         256GB, Navy Blue
                                       </p>
@@ -61,7 +66,9 @@ export default function CartDropdown(props: any) {
                                       </h5>
                                     </div>
                                     <div style={{ width: "80px" }}>
-                                      <h5 className="mb-0">{cart.price}</h5>
+                                      <h5 className="mb-0">
+                                        {formatMoney(cart.price)}
+                                      </h5>
                                     </div>
                                     <a href="#!" style={{ color: "#cecece " }}>
                                       <i className="fas fa-trash-alt"></i>
@@ -86,7 +93,7 @@ export default function CartDropdown(props: any) {
                         </div>
                         <div className="d-flex justify-content-between">
                           <p className="mb-2">Thành tiền:</p>
-                          <p className="mb-2">{sumPrice}</p>
+                          <p className="mb-2">{formatMoney(sumPrice)}</p>
                         </div>
                         <div className="d-flex justify-content-between">
                           <p className="mb-2">Ship</p>
@@ -94,7 +101,7 @@ export default function CartDropdown(props: any) {
                         </div>
                         <div className="d-flex justify-content-between mb-4">
                           <p className="mb-2">Tổng số tiền</p>
-                          <p className="mb-2">{sumPrice + ship}</p>
+                          <p className="mb-2">{formatMoney(sumPrice + ship)}</p>
                         </div>
 
                         <a
