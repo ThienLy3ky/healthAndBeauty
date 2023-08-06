@@ -43,7 +43,10 @@ const MenuClient = (props: any) => {
                       </a>
                     </div>
                   </div>
-                  <div className="navbar-nav ml-auto py-0 d-none d-lg-block">
+                  <div
+                    className="navbar-nav ml-auto py-0 d-none d-lg-block"
+                    style={{ display: "block !important" }}
+                  >
                     <div className="btn px-0 ml-3 no-padding no-margin">
                       <a href="#/" className="btn px-0">
                         <i className="fas fa-heart text-primary"></i>
